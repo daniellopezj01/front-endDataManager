@@ -1,1 +1,25 @@
-<p>home works!</p>
+<mat-spinner class="spinner" *ngIf="!showinfo"></mat-spinner>
+<br>
+
+<br>
+<div *ngIf="showinfo" class="container">
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center"><strong><b>Analisis de los crimenes en Denver</b></strong></h1>
+    <br>
+    <br>
+    <div class="container col-md-8">
+        <div>
+            <h2 style="text-align: center"><strong><b>Numero de crimenes por año</b></strong></h2>
+            <div style="display: block">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+<br><br>
